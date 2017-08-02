@@ -6,6 +6,8 @@ data "aws_caller_identity" "current" {}
 
 data "aws_canonical_user_id" "current" {}
 
+data "aws_availability_zones" "az" {}
+
 data "aws_region" "current" {
   current = true
 }
@@ -28,4 +30,8 @@ output "caller_arn" {
 
 output "caller_user" {
   value = "${data.aws_caller_identity.current.user_id}"
+}
+
+output "azs" {
+  value = "${data.aws_availability_zones.az.names}"
 }
