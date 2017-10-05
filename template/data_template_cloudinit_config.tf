@@ -14,7 +14,7 @@ data "template_file" "ecs_param" {
   template = "${file("${path.cwd}/cloud-init/ecs_pram.sh")}"
 
   vars {
-    ecs_cluster = "${data.aws_ecs_cluster.cluster.name}"
+    ecs_cluster = "${data.aws_ecs_cluster.cluster.cluster_name}"
 
     #ecs_instance_attributes = "{\"placement-tier\":\"${terraform.workspace}-tier\"}"
   }
