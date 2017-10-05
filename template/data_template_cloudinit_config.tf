@@ -11,7 +11,7 @@ data "template_file" "cloud_init_config" {
 }
 
 data "template_file" "ecs_param" {
-  template = "${file("${path.cwd}/cloud-init/ecs_pram.sh")}"
+  template = "${file("${path.cwd}/cloud-init/ecs_param.sh")}"
 
   vars {
     ecs_cluster = "${data.aws_ecs_cluster.cluster.cluster_name}"
