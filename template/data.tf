@@ -4,6 +4,4 @@ data "aws_canonical_user_id" "current" {}
 
 data "aws_availability_zones" "az" {}
 
-data "aws_region" "current" {
-  current = true
-}
+data "aws_region" "current" {}
