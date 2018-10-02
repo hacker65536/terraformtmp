@@ -1,0 +1,8 @@
+#   tags = "${merge(var.tags, map("Name", "my resource"))}"
+variable "tags" {
+  default = {
+    Env    = "ENVNAME"
+    Author = "MyNAME"
+    Build  = "terraform"
+  }
+}
